@@ -4,7 +4,8 @@
   "description": "A web app to store your favorite movies and TV shows.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server/app.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,9 @@
   "homepage": "https://github.com/orjwan98/Movie-Library#readme",
   "dependencies": {
     "env2": "^2.2.2",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "nodemon": "^1.18.9",
     "pg": "^7.7.1"
   }
 }
