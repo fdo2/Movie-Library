@@ -1,0 +1,26 @@
+BEGIN;
+
+DROP TABLE IF EXISTS movieusers CASCADE;
+DROP TABLE IF EXISTS movielibrary CASCADE;
+DROP TABLE IF EXISTS movieCategory CASCADE;
+
+CREATE TABLE movieusers(
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE movielibrary(
+  id SERIAL PRIMARY KEY,
+  library VARCHAR(255) NOT NULL,
+  user_id VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE movieCategory(
+  id SERIAL PRIMARY KEY,
+  category VARCHAR(255) NOT NULL,
+  library_id VARCHAR(255) NOT NULL
+);
+
+COMMIT;
