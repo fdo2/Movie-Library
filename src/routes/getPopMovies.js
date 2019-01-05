@@ -18,7 +18,7 @@ exports.get = (request, response) => {
           summary: ele.overview
         };
       });
-      response.send("The operation was successful");
+      response.render("home", { movies: sortedMovies });
     }
   });
 };

@@ -1,1 +1,36 @@
-<h1>Template is working</h1>
+<header class="mainHder">
+   <h1 class="siteTitle"><a href="/">Movie Library!</a></h1>
+   <nav class="navBar">
+     <ul class="registerList">
+       <li class="signUp"><a href="#">Sign Up</a></li>
+       <li class="logIn"><a href="#">Log in</a></li>
+     </ul>
+   </nav>
+ </header>
+   <section class="searchSection">
+     <h2 class="searchTitle">Search for your favorite Movies!</h2>
+     <h4><a href="#browseTitle">or browse our library!</a></h4>
+     <form>
+       <input id="movieSearcher" type="text"
+       placeholder="Type in what you're looking for..."/>
+       <button id="searchButton" type="submit">Search!</button>
+     </form>
+   </section>
+   <section class="browseSection">
+     <h2 class="browseTitle" id="browseTitle">
+       Browse our library containing hundreds of movies!
+     </h2>
+     {{#each movies}}
+     <div class="movieCard" id="movieCard">
+       <h3 class="movieName" id="movieName">{{this.title}}</h3>
+       <img class="moviePoster" id="moviePoster"
+       src="{{this.img_url}}" alt = "{{this.title}}"/>
+       <p class="movieSummary" id="movieSummary">
+         {{this.summary}}
+       </p>
+       <h4>Rating: {{this.rating}}</h4>
+       <button id="addButton" type="submit">Add to My Library +</button>
+       <button>view more information...</button>
+       {{/each}}
+     </div>
+   </section>
